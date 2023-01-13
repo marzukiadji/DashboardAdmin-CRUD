@@ -1,17 +1,16 @@
 <?php
   require ('functions.php');
   $mahasiswa = query("SELECT * FROM `tbl_mahasiswa` ORDER BY `tbl_mahasiswa`.`nama` ASC");
+   
+  session_start();
+  if($_SESSION['status']!="login"){
+    header("location:../index.php?pesan=belum_login");
+  }
 ?>
 <!DOCTYPE html>
 <html>
   <head>
     <title>Admin | Data Mahasiswa</title> <?php include 'header.php' ?>
-  <?php 
-    session_start();
-    if($_SESSION['status']!="login"){
-      header("location:../index.php?pesan=belum_login");
-    }
-  ?>
   </head>
   <body class="hold-transition sidebar-mini">
     <div class="wrapper">

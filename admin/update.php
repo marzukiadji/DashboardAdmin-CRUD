@@ -1,10 +1,12 @@
 <?php
 //memanggil modul fungsi
 require('functions.php');
+
 session_start();
 if($_SESSION['status']!="login"){
   header("location:../index.php?pesan=belum_login");
   }
+  
 //ambil data dari URL
 $getnpm = $_GET["npm"];
 //ambil data mahasiswa

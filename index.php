@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Sistem Informasi | Login</title>
-	<?php include 'header.php' ?>
-</head>
 <?php 
 if(isset($_GET['pesan'])){
     if($_GET['pesan'] == "gagal"){
@@ -17,6 +11,13 @@ if(isset($_GET['pesan'])){
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sistem Informasi | Login</title>
+	<?php include 'header.php' ?>
+</head>
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">

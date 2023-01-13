@@ -1,6 +1,7 @@
 <?php 
 //memanggil modul fungsi dengan cara require atau include
 require('functions.php');
+
 session_start();
 if($_SESSION['status']!="login"){
   header("location:../index.php?pesan=belum_login");
