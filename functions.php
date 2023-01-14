@@ -94,7 +94,7 @@ function registrasi($data){
         return false;
     }
     //enkripsi password
-    //$password = password_hash($password, PASSWORD_DEFAULT);
+    $password = md5($password);
 
     //query insert data
     $sql = "INSERT INTO user (username,password) VALUES ('$username','$password')";

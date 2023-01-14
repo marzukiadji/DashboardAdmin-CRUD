@@ -4,7 +4,7 @@
  
     // menangkap data yang dikirim dari form login
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
  
     // menyeleksi data pada tabel admin dengan username dan password yang sesuai
     $data = mysqli_query($conn, "SELECT * FROM user WHERE username='$username' and password='$password'");
